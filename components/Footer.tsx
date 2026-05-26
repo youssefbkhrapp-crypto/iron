@@ -6,14 +6,14 @@ import { SITE_NAME, WHATSAPP_URL } from "@/lib/constants";
 const footerLinks = {
   pages: [
     { label: "Accueil", href: "/" },
-    { label: "Tarifs", href: "/pricing" },
+    { label: "Tarifs", href: "/tarifs" },
     { label: "FAQ", href: "/faq" },
-    { label: "Guide d'installation", href: "/setup-guide" },
+    { label: "Guide d'installation", href: "/installation" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [
-    { label: "Politique de Confidentialité", href: "/privacy-policy" },
-    { label: "Conditions Générales", href: "/terms" },
+    { label: "Politique de Confidentialité", href: "/politique-confidentialite" },
+    { label: "Conditions Générales", href: "/conditions-generales" },
   ],
 };
 

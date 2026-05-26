@@ -64,7 +64,7 @@ function CheckoutContent() {
       <div className="min-h-screen bg-white pt-40 pb-24 flex items-center justify-center">
         <div className="text-center">
           <p className="text-xl font-bold text-[#1a1a2e] mb-4">Plan introuvable.</p>
-          <Link href="/pricing" className="font-semibold underline" style={{ color: "#7C0CB8" }}>
+          <Link href="/tarifs" className="font-semibold underline" style={{ color: "#7C0CB8" }}>
             Voir tous les tarifs →
           </Link>
         </div>
@@ -117,7 +117,7 @@ function CheckoutContent() {
         {/* Back link */}
         <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
           <Link
-            href="/pricing"
+            href="/tarifs"
             className="inline-flex items-center gap-1.5 text-sm font-medium mb-10 transition-opacity hover:opacity-70"
             style={{ color: "#7C0CB8" }}
           >

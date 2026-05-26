@@ -207,7 +207,7 @@ export default function PricingSection() {
                 {/* CTA button */}
                 <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                   <Link
-                    href={`/checkout?plan=${plan.checkoutId}`}
+                    href={`/commande?plan=${plan.checkoutId}`}
                     className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-sm text-white text-center transition-all duration-300"
                     style={{
                       background: ctaGradients[plan.badgeStyle],
@@ -227,7 +227,7 @@ export default function PricingSection() {
 
         <AnimatedSection delay={0.4} className="mt-10 text-center">
           <Link
-            href="/pricing"
+            href="/tarifs"
             className="text-sm font-semibold underline underline-offset-4 transition-colors hover:opacity-70"
             style={{ color: "#7C0CB8" }}
           >

@@ -94,7 +94,7 @@ export default function CTABanner() {
             </motion.a>
 
             <motion.a
-              href="/pricing"
+              href="/tarifs"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2 px-10 py-4 rounded-full font-bold text-white text-base border-2 border-white/30 hover:border-white/60 bg-white/10 hover:bg-white/15 transition-all duration-300 uppercase tracking-wider backdrop-blur-sm"

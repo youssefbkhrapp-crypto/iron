@@ -305,7 +305,7 @@ export default function Hero() {
               </motion.a>
 
               <motion.a
-                href="/pricing"
+                href="/tarifs"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-2 px-9 py-4 rounded-full font-bold text-sm transition-all duration-300 uppercase tracking-widest"

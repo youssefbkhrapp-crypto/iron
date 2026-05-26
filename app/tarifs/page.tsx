@@ -209,7 +209,7 @@ export default function PricingPage() {
 
                   {/* CTA */}
                   <Link
-                    href={`/checkout?plan=${plan.checkoutId}`}
+                    href={`/commande?plan=${plan.checkoutId}`}
                     className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-sm text-white transition-all duration-300 hover:opacity-90"
                     style={{
                       background: badgeGradients[plan.badgeStyle],
