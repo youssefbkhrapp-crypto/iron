@@ -84,9 +84,9 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="text-xl font-bold text-[#1a1a2e] mb-3">4. Partage des Données</h2>
               <p className="text-[#4a4a6a] leading-relaxed text-sm">
-                Nous ne vendons, n'échangeons ni ne transférons vos informations personnelles à des tiers.
-                Cela n'inclut pas les tiers de confiance qui nous aident à exploiter notre service,
-                à condition qu'ils s'engagent à garder ces informations confidentielles.
+                Nous ne vendons, n&apos;échangeons ni ne transférons vos informations personnelles à des tiers.
+                Cela n&apos;inclut pas les tiers de confiance qui nous aident à exploiter notre service,
+                à condition qu&apos;ils s&apos;engagent à garder ces informations confidentielles.
               </p>
             </section>
 
