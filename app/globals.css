@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #141458;
+  --deep-purple: #690A88;
+  --electric-blue: #2C16B5;
+  --neon-purple: #7C0CB8;
+  --soft-violet: #6A637C;
+  --silver: #F7F6F8;
+  --text-dark: #1a1a2e;
+  --text-body: #4a4a6a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--text-dark);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f8;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #7C0CB8, #2C16B5);
+  border-radius: 3px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(124, 12, 184, 0.2);
+  color: #1a1a2e;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #7C0CB8 0%, #2C16B5 50%, #690A88 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(135deg, #a855f7 0%, #7C0CB8 50%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow button */
+.glow-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.glow-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.glow-btn:hover::before {
+  left: 100%;
+}
+
+/* Light glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(124, 12, 184, 0.12);
+  box-shadow: 0 4px 24px rgba(124, 12, 184, 0.08);
+}
+
+/* White card with shadow */
+.white-card {
+  background: #ffffff;
+  border: 1px solid rgba(124, 12, 184, 0.12);
+  box-shadow: 0 4px 24px rgba(124, 12, 184, 0.08), 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* Animated gradient background (for CTA sections) */
+.animated-gradient {
+  background: linear-gradient(
+    -45deg,
+    #141458,
+    #2C16B5,
+    #690A88,
+    #7C0CB8,
+    #141458
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(124, 12, 184, 0.3),
+                0 0 10px rgba(105, 10, 136, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(124, 12, 184, 0.6),
+                0 0 40px rgba(105, 10, 136, 0.3),
+                0 0 60px rgba(44, 22, 181, 0.15);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Section fade-in */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Star rating */
+.star-filled {
+  color: #f59e0b;
+  fill: #f59e0b;
+}
+
+/* WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.7);
+}
+
+/* Pricing card highlight */
+.pricing-popular {
+  background: linear-gradient(145deg, #ffffff 0%, #faf5ff 100%);
+  border: 2px solid rgba(124, 12, 184, 0.4);
+  box-shadow: 0 0 40px rgba(124, 12, 184, 0.15), 0 8px 32px rgba(124, 12, 184, 0.1);
+}
+
+/* Comparison table */
+.comparison-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(124, 12, 184, 0.08);
+}
+
+.comparison-table thead th {
+  background: rgba(124, 12, 184, 0.04);
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section backgrounds */
+.section-white { background-color: #ffffff; }
+.section-light { background-color: #F7F6F8; }
+.section-lavender { background-color: #f5f0ff; }
+.section-soft { background: linear-gradient(135deg, #faf8ff 0%, #f0edff 100%); }
