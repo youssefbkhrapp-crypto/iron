@@ -2,7 +2,7 @@ export const WHATSAPP_NUMBER = "447400455889";
 export const WHATSAPP_MESSAGE = "Bonjour, je souhaite souscrire à IRON TV PRO MAX";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 export const SITE_NAME = "IRON TV PRO MAX";
-export const SITE_URL = "https://irontvpromax.fr";
+export const SITE_URL = "https://irontvstream.com";
 export const SITE_DESCRIPTION =
   "IRON TV PRO MAX – Le meilleur abonnement IPTV Premium en France. 20 000+ chaînes UHD/FHD/HD, 50 000+ films & séries, technologie Anti-Freeze et support 24/7. IPTV 4K stable et rapide.";
 
