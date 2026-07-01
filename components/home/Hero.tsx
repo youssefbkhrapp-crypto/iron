@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Play, Star, Users, Tv, Zap, CheckCircle, Wifi, Shield, ArrowRight } from "lucide-react";
+import { Play, Star, Users, Tv, Zap, CheckCircle, Wifi, Shield, ArrowRight, Send } from "lucide-react";
 import Image from "next/image";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, TELEGRAM_URL } from "@/lib/constants";
 
 const stats = [
   { label: "Chaînes Live", value: "20K+", icon: Tv },
@@ -302,6 +302,22 @@ export default function Hero() {
               >
                 Commencer
                 <ArrowRight className="w-4 h-4" />
+              </motion.a>
+
+              <motion.a
+                href={TELEGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contactez-nous sur Telegram"
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-[52px] h-[52px] rounded-full flex items-center justify-center shrink-0"
+                style={{
+                  background: "linear-gradient(135deg, #4DC5F9, #229ED9)",
+                  boxShadow: "0 6px 20px rgba(34,158,217,0.4)",
+                }}
+              >
+                <Send className="w-5 h-5 text-white" />
               </motion.a>
 
               <motion.a

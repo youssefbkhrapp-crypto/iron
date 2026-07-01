@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle } from "lucide-react";
-import { SITE_NAME, WHATSAPP_URL } from "@/lib/constants";
+import { MessageCircle, Send } from "lucide-react";
+import { SITE_NAME, WHATSAPP_URL, TELEGRAM_URL, TELEGRAM_USERNAME } from "@/lib/constants";
 
 const footerLinks = {
   pages: [
@@ -45,21 +45,38 @@ export default function Footer() {
               {SITE_NAME} – Le meilleur abonnement IPTV Premium en France. 20 000+ chaînes,
               50 000+ films & séries en qualité 4K UHD sur tous vos appareils.
             </p>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 text-sm transition-colors duration-200 group"
-              style={{ color: "rgba(247,246,248,0.5)" }}
-            >
-              <div
-                className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors"
-                style={{ background: "rgba(37,211,102,0.1)", border: "1px solid rgba(37,211,102,0.25)" }}
+            <div className="flex flex-col gap-3">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 text-sm transition-colors duration-200 group"
+                style={{ color: "rgba(247,246,248,0.5)" }}
               >
-                <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
-              </div>
-              <span className="group-hover:text-[#25D366] transition-colors">+44 7400 455889</span>
-            </a>
+                <div
+                  className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors"
+                  style={{ background: "rgba(37,211,102,0.1)", border: "1px solid rgba(37,211,102,0.25)" }}
+                >
+                  <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
+                </div>
+                <span className="group-hover:text-[#25D366] transition-colors">+44 7400 455889</span>
+              </a>
+              <a
+                href={TELEGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 text-sm transition-colors duration-200 group"
+                style={{ color: "rgba(247,246,248,0.5)" }}
+              >
+                <div
+                  className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors"
+                  style={{ background: "rgba(34,158,217,0.1)", border: "1px solid rgba(34,158,217,0.25)" }}
+                >
+                  <Send className="w-3.5 h-3.5 text-[#229ED9]" />
+                </div>
+                <span className="group-hover:text-[#229ED9] transition-colors">@{TELEGRAM_USERNAME}</span>
+              </a>
+            </div>
           </div>
 
           {/* Navigation */}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { SITE_NAME, WHATSAPP_URL } from "@/lib/constants";
+import { SITE_NAME, WHATSAPP_URL, TELEGRAM_URL, TELEGRAM_USERNAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Politique de Confidentialité",
@@ -119,10 +119,10 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="text-xl font-bold text-[#1a1a2e] mb-3">7. Contact</h2>
               <p className="text-[#4a4a6a] leading-relaxed text-sm mb-3">
-                Pour toute question concernant cette politique de confidentialité, contactez-nous via WhatsApp :
+                Pour toute question concernant cette politique de confidentialité, contactez-nous via WhatsApp ou Telegram :
               </p>
               <div
-                className="rounded-xl p-4"
+                className="rounded-xl p-4 space-y-2"
                 style={{ background: "rgba(168,85,247,0.05)", border: "1px solid rgba(168,85,247,0.2)" }}
               >
                 <p className="text-sm text-[#1a1a2e] font-bold mb-1">{SITE_NAME}</p>
@@ -130,10 +130,19 @@ export default function PrivacyPolicyPage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm transition-colors hover:opacity-70"
+                  className="block text-sm transition-colors hover:opacity-70"
                   style={{ color: "#25D366" }}
                 >
                   WhatsApp : +44 7400 455889
+                </a>
+                <a
+                  href={TELEGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm transition-colors hover:opacity-70"
+                  style={{ color: "#229ED9" }}
+                >
+                  Telegram : @{TELEGRAM_USERNAME}
                 </a>
               </div>
             </section>

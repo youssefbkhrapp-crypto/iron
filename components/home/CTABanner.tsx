@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, Zap, Shield, Clock } from "lucide-react";
+import { MessageCircle, Zap, Shield, Clock, Send } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, TELEGRAM_URL } from "@/lib/constants";
 
 const perks = [
   { icon: Zap, text: "Activation Instantanée" },
@@ -58,7 +58,7 @@ export default function CTABanner() {
           </h2>
 
           <p className="text-white/70 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-            Contactez-nous sur WhatsApp pour passer votre commande. Votre abonnement IPTV Premium
+            Contactez-nous sur WhatsApp ou Telegram pour passer votre commande. Votre abonnement IPTV Premium
             sera activé en quelques minutes — sans attente, sans complication.
           </p>
 
@@ -91,6 +91,22 @@ export default function CTABanner() {
             >
               <MessageCircle className="w-5 h-5" />
               Commander
+            </motion.a>
+
+            <motion.a
+              href={TELEGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="inline-flex items-center gap-3 px-10 py-4 rounded-full font-bold text-white text-base uppercase tracking-wider transition-all duration-300"
+              style={{
+                background: "linear-gradient(135deg, #4DC5F9, #229ED9)",
+                boxShadow: "0 0 30px rgba(34,158,217,0.5), 0 6px 25px rgba(34,158,217,0.3)",
+              }}
+            >
+              <Send className="w-5 h-5" />
+              Telegram
             </motion.a>
 
             <motion.a

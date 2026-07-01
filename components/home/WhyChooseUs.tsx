@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Star, Library, Rocket, LifeBuoy, ArrowRight } from "lucide-react";
+import { Star, Library, Rocket, LifeBuoy, ArrowRight, Send } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { WHY_CHOOSE_US, WHATSAPP_URL } from "@/lib/constants";
+import { WHY_CHOOSE_US, WHATSAPP_URL, TELEGRAM_URL } from "@/lib/constants";
 
 const iconMap: Record<string, React.ElementType> = { Star, Library, Rocket, LifeBuoy };
 
@@ -53,21 +53,39 @@ export default function WhyChooseUs() {
                 une expérience streaming exceptionnelle avec une technologie de pointe, une bibliothèque
                 de contenu massive et un support qui se soucie vraiment de vous.
               </p>
-              <motion.a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.97 }}
-                className="glow-btn inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full font-bold text-white text-sm uppercase tracking-wider"
-                style={{
-                  background: "linear-gradient(135deg, #a855f7, #2C16B5)",
-                  boxShadow: "0 6px 20px rgba(168,85,247,0.35)",
-                }}
-              >
-                Commencer
-                <ArrowRight className="w-4 h-4" />
-              </motion.a>
+              <div className="flex flex-wrap items-center gap-4">
+                <motion.a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="glow-btn inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full font-bold text-white text-sm uppercase tracking-wider"
+                  style={{
+                    background: "linear-gradient(135deg, #a855f7, #2C16B5)",
+                    boxShadow: "0 6px 20px rgba(168,85,247,0.35)",
+                  }}
+                >
+                  Commencer
+                  <ArrowRight className="w-4 h-4" />
+                </motion.a>
+
+                <motion.a
+                  href={TELEGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Contactez-nous sur Telegram"
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-[52px] h-[52px] rounded-full flex items-center justify-center shrink-0"
+                  style={{
+                    background: "linear-gradient(135deg, #4DC5F9, #229ED9)",
+                    boxShadow: "0 6px 20px rgba(34,158,217,0.35)",
+                  }}
+                >
+                  <Send className="w-5 h-5 text-white" />
+                </motion.a>
+              </div>
             </AnimatedSection>
           </div>
 

@@ -67,7 +67,7 @@ export default function PricingSection() {
           </h2>
           <p className="text-[#4a4a6a] max-w-xl mx-auto">
             Toutes les formules incluent l&apos;accès complet à nos chaînes premium et VOD.
-            Commandez instantanément via WhatsApp.
+            Commandez instantanément via WhatsApp ou Telegram.
           </p>
         </AnimatedSection>
 

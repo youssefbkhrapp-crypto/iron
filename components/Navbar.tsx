@@ -4,8 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { Menu, X, Send } from "lucide-react";
+import { WHATSAPP_URL, TELEGRAM_URL } from "@/lib/constants";
 
 const navLinks = [
   { label: "Accueil", href: "/" },
@@ -78,6 +78,21 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3 shrink-0">
             <motion.a
+              href={TELEGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contactez-nous sur Telegram"
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-11 h-11 rounded-full flex items-center justify-center shrink-0 transition-all duration-300"
+              style={{
+                background: "linear-gradient(135deg, #4DC5F9, #229ED9)",
+                boxShadow: "0 4px 16px rgba(34,158,217,0.4)",
+              }}
+            >
+              <Send className="w-4.5 h-4.5 text-white" />
+            </motion.a>
+            <motion.a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -131,7 +146,7 @@ export default function Navbar() {
                   </Link>
                 </motion.div>
               ))}
-              <div className="pt-3 pb-1">
+              <div className="pt-3 pb-1 space-y-2.5">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
@@ -144,6 +159,20 @@ export default function Navbar() {
                   }}
                 >
                   Commander sur WhatsApp
+                </a>
+                <a
+                  href={TELEGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-center gap-2 w-full text-center px-6 py-4 rounded-full text-sm font-bold text-white uppercase tracking-wider"
+                  style={{
+                    background: "linear-gradient(135deg, #4DC5F9, #229ED9)",
+                    boxShadow: "0 4px 15px rgba(34,158,217,0.35)",
+                  }}
+                >
+                  <Send className="w-4 h-4" />
+                  Commander sur Telegram
                 </a>
               </div>
             </div>

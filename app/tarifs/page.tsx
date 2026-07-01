@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Check, X, Zap, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { PRICING_PLANS, WHATSAPP_URL, SITE_NAME } from "@/lib/constants";
+import { PRICING_PLANS, WHATSAPP_URL, TELEGRAM_URL, SITE_NAME } from "@/lib/constants";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import GlowButton from "@/components/ui/GlowButton";
 
@@ -74,7 +74,7 @@ export default function PricingPage() {
           </h1>
           <p className="text-[#4a4a6a] text-lg max-w-2xl mx-auto">
             Toutes les formules incluent notre bibliothèque complète de chaînes premium et VOD.
-            Commandez sur WhatsApp pour une activation instantanée.
+            Commandez sur WhatsApp ou Telegram pour une activation instantanée.
           </p>
         </AnimatedSection>
 
@@ -295,11 +295,16 @@ export default function PricingPage() {
               Prêt à Commencer le Streaming ?
             </h2>
             <p className="text-[#4a4a6a] mb-8 max-w-md mx-auto">
-              Contactez-nous sur WhatsApp pour passer votre commande et recevoir vos identifiants en quelques minutes.
+              Contactez-nous sur WhatsApp ou Telegram pour passer votre commande et recevoir vos identifiants en quelques minutes.
             </p>
-            <GlowButton size="lg" variant="whatsapp" showIcon>
-              Commander sur WhatsApp
-            </GlowButton>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <GlowButton size="lg" variant="whatsapp" showIcon>
+                Commander sur WhatsApp
+              </GlowButton>
+              <GlowButton size="lg" variant="telegram" showIcon href={TELEGRAM_URL}>
+                Commander sur Telegram
+              </GlowButton>
+            </div>
             <p className="mt-4 text-sm text-[#4a4a6a]/50">
               Activation instantanée · Support 24/7 · Essai gratuit disponible
             </p>

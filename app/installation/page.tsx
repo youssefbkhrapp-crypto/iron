@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Download, ShieldCheck, PlayCircle, MessageCircle, Sparkles, CheckCircle2 } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import GlowButton from "@/components/ui/GlowButton";
-import { SITE_NAME } from "@/lib/constants";
+import { SITE_NAME, TELEGRAM_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Guide d'Installation IPTV — Downloader",
@@ -344,11 +344,16 @@ export default function SetupGuidePage() {
               Besoin d&apos;Aide pour l&apos;Installation ?
             </h2>
             <p className="text-[#4a4a6a] mb-8 max-w-md mx-auto text-sm">
-              Notre équipe est disponible 24h/24, 7j/7 sur WhatsApp pour vous guider étape par étape et vous envoyer vos identifiants instantanément.
+              Notre équipe est disponible 24h/24, 7j/7 sur WhatsApp et Telegram pour vous guider étape par étape et vous envoyer vos identifiants instantanément.
             </p>
-            <GlowButton variant="whatsapp" showIcon>
-              Contacter le Support
-            </GlowButton>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <GlowButton variant="whatsapp" showIcon>
+                WhatsApp
+              </GlowButton>
+              <GlowButton variant="telegram" showIcon href={TELEGRAM_URL}>
+                Telegram
+              </GlowButton>
+            </div>
           </div>
         </AnimatedSection>
       </div>

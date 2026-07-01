@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus, MessageCircle, Search } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import GlowButton from "@/components/ui/GlowButton";
-import { FAQS, SITE_NAME } from "@/lib/constants";
+import { FAQS, SITE_NAME, TELEGRAM_URL } from "@/lib/constants";
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -157,11 +157,16 @@ export default function FAQPage() {
               D&apos;autres Questions ?
             </h2>
             <p className="text-[#4a4a6a] mb-6 text-sm max-w-sm mx-auto">
-              Notre équipe de support est disponible 24h/24, 7j/7 sur WhatsApp pour répondre à toutes vos questions.
+              Notre équipe de support est disponible 24h/24, 7j/7 sur WhatsApp et Telegram pour répondre à toutes vos questions.
             </p>
-            <GlowButton variant="whatsapp" showIcon>
-              Nous Contacter
-            </GlowButton>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <GlowButton variant="whatsapp" showIcon>
+                WhatsApp
+              </GlowButton>
+              <GlowButton variant="telegram" showIcon href={TELEGRAM_URL}>
+                Telegram
+              </GlowButton>
+            </div>
           </div>
         </AnimatedSection>
       </div>

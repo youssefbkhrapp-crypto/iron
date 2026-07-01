@@ -3,9 +3,9 @@
 import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { Check, Shield, Zap, Clock, ChevronRight, MessageCircle, ArrowLeft, Landmark, Coins, Link2 } from "lucide-react";
+import { Check, Shield, Zap, Clock, ChevronRight, MessageCircle, ArrowLeft, Landmark, Coins, Link2, Send } from "lucide-react";
 import Link from "next/link";
-import { PRICING_PLANS } from "@/lib/constants";
+import { PRICING_PLANS, TELEGRAM_URL } from "@/lib/constants";
 
 const badgeGradients: Record<string, string> = {
   orange: "linear-gradient(135deg, #f97316, #ea580c)",
@@ -205,7 +205,7 @@ function CheckoutContent() {
                 <div className="space-y-2.5 pt-5" style={{ borderTop: "1px solid rgba(168,85,247,0.1)" }}>
                   {[
                     { icon: Zap,            text: "Activation instantanée après commande" },
-                    { icon: MessageCircle,  text: "Support WhatsApp 24h/24, 7j/7" },
+                    { icon: MessageCircle,  text: "Support WhatsApp & Telegram 24h/24, 7j/7" },
                     { icon: Clock,          text: "Réception des identifiants en quelques minutes" },
                     { icon: Shield,         text: "Processus sécurisé & confidentiel" },
                   ].map(({ icon: Icon, text }) => (
@@ -405,6 +405,26 @@ function CheckoutContent() {
                   Notre équipe confirmera votre abonnement et vous enverra vos identifiants
                   dans les plus brefs délais.
                 </p>
+
+                {/* Telegram alternative */}
+                <div className="flex items-center gap-3 text-xs text-[#4a4a6a]/50">
+                  <div className="h-px flex-1 bg-[#7C0CB8]/10" />
+                  ou
+                  <div className="h-px flex-1 bg-[#7C0CB8]/10" />
+                </div>
+                <a
+                  href={TELEGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2.5 py-3.5 rounded-xl font-bold text-sm transition-all duration-300"
+                  style={{
+                    border: "1.5px solid rgba(34,158,217,0.35)",
+                    color: "#229ED9",
+                  }}
+                >
+                  <Send className="w-4 h-4" />
+                  Commander via Telegram
+                </a>
               </form>
             </div>
 
