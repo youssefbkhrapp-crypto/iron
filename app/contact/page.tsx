@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { MessageCircle, Clock, MapPin, Send, Zap } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import GlowButton from "@/components/ui/GlowButton";
-import { WHATSAPP_URL, SITE_NAME } from "@/lib/constants";
+import { WHATSAPP_URL, TELEGRAM_URL, TELEGRAM_USERNAME, SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Contactez ${SITE_NAME} via WhatsApp. Notre équipe est disponible 24h/24, 7j/7 pour les commandes, l'installation et le support technique.`,
+  description: `Contactez ${SITE_NAME} via WhatsApp ou Telegram. Notre équipe est disponible 24h/24, 7j/7 pour les commandes, l'installation et le support technique.`,
 };
 
 export default function ContactPage() {
@@ -41,7 +41,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-[#4a4a6a] text-lg max-w-xl mx-auto">
-            Notre équipe de support est disponible 24h/24, 7j/7 sur WhatsApp pour vous aider
+            Notre équipe de support est disponible 24h/24, 7j/7 sur WhatsApp et Telegram pour vous aider
             avec les commandes, l&apos;installation et toutes vos questions techniques.
           </p>
         </AnimatedSection>
@@ -84,6 +84,48 @@ export default function ContactPage() {
             >
               <Send className="w-4 h-4" />
               Contacter sur WhatsApp
+            </a>
+          </div>
+        </AnimatedSection>
+
+        {/* Telegram hero card */}
+        <AnimatedSection delay={0.15} className="mb-8">
+          <div
+            className="rounded-3xl p-8 sm:p-10 text-center relative overflow-hidden bg-white"
+            style={{
+              border: "1px solid rgba(34,158,217,0.35)",
+              boxShadow: "0 4px 30px rgba(34,158,217,0.08), 0 0 0 1px rgba(34,158,217,0.05)",
+            }}
+          >
+            <div className="absolute inset-0 rounded-3xl pointer-events-none"
+              style={{ background: "radial-gradient(circle at 50% 0%, rgba(34,158,217,0.05), transparent 60%)" }}
+            />
+            <div
+              className="relative w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6"
+              style={{
+                background: "linear-gradient(135deg, #4DC5F9, #229ED9)",
+                boxShadow: "0 6px 25px rgba(34,158,217,0.4)",
+              }}
+            >
+              <Send className="w-8 h-8 text-white" />
+            </div>
+            <h2 className="text-2xl font-extrabold text-[#1a1a2e] mb-2">Support Telegram</h2>
+            <p className="text-[#4a4a6a] mb-2 text-sm">Écrivez-nous sur Telegram pour une réponse rapide</p>
+            <p className="text-xl font-bold mb-6" style={{ color: "#229ED9" }}>
+              @{TELEGRAM_USERNAME}
+            </p>
+            <a
+              href={TELEGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glow-btn inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full font-bold text-white uppercase tracking-wider transition-all duration-300"
+              style={{
+                background: "linear-gradient(135deg, #4DC5F9, #229ED9)",
+                boxShadow: "0 4px 20px rgba(34,158,217,0.4)",
+              }}
+            >
+              <Send className="w-4 h-4" />
+              Contacter sur Telegram
             </a>
           </div>
         </AnimatedSection>
@@ -182,12 +224,17 @@ export default function ContactPage() {
             Prêt à Commander ?
           </h2>
           <p className="text-[#4a4a6a] mb-6 max-w-md mx-auto">
-            La manière la plus rapide de commencer est via WhatsApp. Nous activerons votre compte
+            La manière la plus rapide de commencer est via WhatsApp ou Telegram. Nous activerons votre compte
             IPTV Premium en quelques minutes après votre commande.
           </p>
-          <GlowButton size="lg" variant="whatsapp" showIcon>
-            Commencer
-          </GlowButton>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <GlowButton size="lg" variant="whatsapp" showIcon>
+              WhatsApp
+            </GlowButton>
+            <GlowButton size="lg" variant="telegram" showIcon href={TELEGRAM_URL}>
+              Telegram
+            </GlowButton>
+          </div>
           </div>
         </AnimatedSection>
       </div>
