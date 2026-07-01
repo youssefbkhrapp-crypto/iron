@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import TelegramButton from "@/components/TelegramButton";
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -71,6 +72,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
+        <TelegramButton />
       </body>
     </html>
   );

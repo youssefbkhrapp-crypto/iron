@@ -1,6 +1,8 @@
 export const WHATSAPP_NUMBER = "447400455889";
 export const WHATSAPP_MESSAGE = "Bonjour, je souhaite souscrire à IRON TV PRO MAX";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+export const TELEGRAM_USERNAME = "FLIXPROTVSERVICE";
+export const TELEGRAM_URL = `https://t.me/${TELEGRAM_USERNAME}`;
 export const SITE_NAME = "IRON TV PRO MAX";
 export const SITE_URL = "https://irontvstream.com";
 export const SITE_DESCRIPTION =
